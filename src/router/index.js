@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import AuthGuard from '../components/common/AuthGuard.vue';
+// import AuthGuard from '../components/common/AuthGuard.vue';
 import LoginView from '../views/auth/LoginView.vue';
 import UserListView from '../views/users/UserListView.vue';
 import UserDetailView from '../views/users/UserDetailView.vue';
 import UserEditView from '../views/users/UserEditView.vue';
-import AttendanceListView from '../views/attendance/AttendanceListView.vue';
-import PenaltyListView from '../views/penalties/PenaltyListView.vue';
-import PenaltyFinedView from '../views/penalties/PenaltyFinedView.vue';
-import AdminDashboard from '../views/dashboard/AdminDashboard.vue';
+// import AttendanceListView from '../views/attendance/AttendanceListView.vue';
+// import PenaltyListView from '../views/penalties/PenaltyListView.vue';
+// import PenaltyFinedView from '../views/penalties/PenaltyFinedView.vue';
+// import AdminDashboard from '../views/dashboard/AdminDashboard.vue';
 import DefaultLayout from '../layouts/DefaultLayout.vue';
 import AuthLayout from '../layouts/AuthLayout.vue';
 
@@ -21,13 +21,13 @@ const routes = [
   {
     path: '/',
     component: DefaultLayout,
-    meta: { requiresAuth: true },
+    meta: { requiresAuth: false },
     children: [
-      {
-        path: '',
-        name: 'Dashboard',
-        component: AdminDashboard
-      },
+      // {
+      //   path: '',
+      //   name: 'Dashboard',
+      //   component: AdminDashboard
+      // },
       {
         path: 'users',
         name: 'UserList',
@@ -43,21 +43,21 @@ const routes = [
         name: 'UserEdit',
         component: UserEditView
       },
-      {
-        path: 'attendance',
-        name: 'AttendanceList',
-        component: AttendanceListView
-      },
-      {
-        path: 'penalties',
-        name: 'PenaltyList',
-        component: PenaltyListView
-      },
-      {
-        path: 'penalties/fined',
-        name: 'PenaltyFined',
-        component: PenaltyFinedView
-      }
+      // {
+      //   path: 'attendance',
+      //   name: 'AttendanceList',
+      //   component: AttendanceListView
+      // },
+      // {
+      //   path: 'penalties',
+      //   name: 'PenaltyList',
+      //   component: PenaltyListView
+      // },
+      // {
+      //   path: 'penalties/fined',
+      //   name: 'PenaltyFined',
+      //   component: PenaltyFinedView
+      // }
     ]
   }
 ];
